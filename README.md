@@ -1,69 +1,100 @@
-# React + TypeScript + Vite
+# React Task App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React Task App is a modern, responsive task management application built with React and TypeScript. It allows users to create, manage, and delete tasks efficiently, with role-based tags and status indicators to organize work effectively.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Task Management**: Create, view, and delete tasks with ease.
+- **Role Tags**: Visual badges indicating task roles (Manager, Developer, Designer).
+- **Status Indicators**: Tasks show their progress status (pending, in-progress, done) with distinct colors and status bars.
+- **Deadline Display**: Tasks with deadlines show formatted dates.
+- **Delete Confirmation**: Prevent accidental deletions with a confirmation step on the delete button.
+- **Responsive Design**: Works seamlessly on desktop and mobile devices.
+- **TypeScript Support**: Fully typed for safer and maintainable code.
+- **Custom Styling**: Includes CSS classes for role and status visual differentiation.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js (v16+ recommended)
+- npm or yarn
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/vanos0600/react-task-app.git
+   cd react-task-app
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+# or
+yarn install
+Run the development server:
+
+bash
+Copy
+Edit
+npm run dev
+# or
+yarn dev
+Open your browser and navigate to http://localhost:3000 (or the port specified by the terminal).
+
+Project Structure
+graphql
+Copy
+Edit
+src/
+├── components/        # React components (e.g., TaskCard)
+├── hooks/             # Custom React hooks (e.g., useTasks)
+├── types/             # TypeScript types and interfaces
+├── utils/             # Utility functions (e.g., localStorage helpers)
+├── assets/            # Images and SVGs
+├── App.tsx            # Main app component
+├── main.tsx           # React app entry point
+Usage
+Add new tasks and assign them roles and statuses.
+
+View task details including description and deadline.
+
+Use the delete button to remove tasks, with a two-step confirmation to prevent mistakes.
+
+Technologies Used
+React 18+
+
+TypeScript
+
+Vite (build tool)
+
+CSS Modules / Tailwind CSS (depending on your setup)
+
+Git for version control
+
+Contributing
+Contributions are welcome! Please open issues or submit pull requests for bug fixes and feature requests.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Author
+Oskar Vanegas
+
+GitHub: @vanos0600
+
+LinkedIn: Oskar Vanegas
+
+Contact
+If you have any questions or feedback, feel free to reach out via GitHub or LinkedIn.
